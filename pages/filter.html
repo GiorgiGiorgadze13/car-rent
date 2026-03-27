@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- font jakarta sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Georgian:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/resets.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="logo-search">
+          <div class="logo">
+            <a href="../index.html">morent</a>
+          </div>
+          <div class="search">
+            <form>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                  stroke="#596780"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 22L20 20"
+                  stroke="#596780"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input type="text" placeholder="Search something here" />
+              <a href="filter.html">
+                <svg
+                  class="filter"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M22 6.5H16"
+                    stroke="#596780"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6 6.5H2"
+                    stroke="#596780"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 10C11.933 10 13.5 8.433 13.5 6.5C13.5 4.567 11.933 3 10 3C8.067 3 6.5 4.567 6.5 6.5C6.5 8.433 8.067 10 10 10Z"
+                    stroke="#596780"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 17.5H18"
+                    stroke="#596780"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 17.5H2"
+                    stroke="#596780"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 21C15.933 21 17.5 19.433 17.5 17.5C17.5 15.567 15.933 14 14 14C12.067 14 10.5 15.567 10.5 17.5C10.5 19.433 12.067 21 14 21Z"
+                    stroke="#596780"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </form>
+          </div>
+        </div>
+        <div class="cta">
+          <div class="favorites cta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="18"
+              viewBox="0 0 20 18"
+              fill="none"
+            >
+              <path
+                d="M14.44 0C12.63 0 11.01 0.88 10 2.23C8.99 0.88 7.37 0 5.56 0C2.49 0 0 2.5 0 5.59C0 6.78 0.19 7.88 0.52 8.9C2.1 13.9 6.97 16.89 9.38 17.71C9.72 17.83 10.28 17.83 10.62 17.71C13.03 16.89 17.9 13.9 19.48 8.9C19.81 7.88 20 6.78 20 5.59C20 2.5 17.51 0 14.44 0Z"
+                fill="#596780"
+              />
+            </svg>
+          </div>
+          <div class="notifications cta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M19.3399 14.49L18.3399 12.83C18.1299 12.46 17.9399 11.76 17.9399 11.35V8.82C17.9399 6.47 16.5599 4.44 14.5699 3.49C14.0499 2.57 13.0899 2 11.9899 2C10.8999 2 9.91994 2.59 9.39994 3.52C7.44994 4.49 6.09994 6.5 6.09994 8.82V11.35C6.09994 11.76 5.90994 12.46 5.69994 12.82L4.68994 14.49C4.28994 15.16 4.19994 15.9 4.44994 16.58C4.68994 17.25 5.25994 17.77 5.99994 18.02C7.93994 18.68 9.97994 19 12.0199 19C14.0599 19 16.0999 18.68 18.0399 18.03C18.7399 17.8 19.2799 17.27 19.5399 16.58C19.7999 15.89 19.7299 15.13 19.3399 14.49Z"
+                fill="#596780"
+              />
+              <path
+                d="M14.8299 20.01C14.4099 21.17 13.2999 22 11.9999 22C11.2099 22 10.4299 21.68 9.87993 21.11C9.55993 20.81 9.31993 20.41 9.17993 20C9.30993 20.02 9.43993 20.03 9.57993 20.05C9.80993 20.08 10.0499 20.11 10.2899 20.13C10.8599 20.18 11.4399 20.21 12.0199 20.21C12.5899 20.21 13.1599 20.18 13.7199 20.13C13.9299 20.11 14.1399 20.1 14.3399 20.07C14.4999 20.05 14.6599 20.03 14.8299 20.01Z"
+                fill="#596780"
+              />
+            </svg>
+          </div>
+          <div class="settings cta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M20.1 9.22006C18.29 9.22006 17.55 7.94006 18.45 6.37006C18.97 5.46006 18.66 4.30006 17.75 3.78006L16.02 2.79006C15.23 2.32006 14.21 2.60006 13.74 3.39006L13.63 3.58006C12.73 5.15006 11.25 5.15006 10.34 3.58006L10.23 3.39006C9.78 2.60006 8.76 2.32006 7.97 2.79006L6.24 3.78006C5.33 4.30006 5.02 5.47006 5.54 6.38006C6.45 7.94006 5.71 9.22006 3.9 9.22006C2.86 9.22006 2 10.0701 2 11.1201V12.8801C2 13.9201 2.85 14.7801 3.9 14.7801C5.71 14.7801 6.45 16.0601 5.54 17.6301C5.02 18.5401 5.33 19.7001 6.24 20.2201L7.97 21.2101C8.76 21.6801 9.78 21.4001 10.25 20.6101L10.36 20.4201C11.26 18.8501 12.74 18.8501 13.65 20.4201L13.76 20.6101C14.23 21.4001 15.25 21.6801 16.04 21.2101L17.77 20.2201C18.68 19.7001 18.99 18.5301 18.47 17.6301C17.56 16.0601 18.3 14.7801 20.11 14.7801C21.15 14.7801 22.01 13.9301 22.01 12.8801V11.1201C22 10.0801 21.15 9.22006 20.1 9.22006ZM12 15.2501C10.21 15.2501 8.75 13.7901 8.75 12.0001C8.75 10.2101 10.21 8.75006 12 8.75006C13.79 8.75006 15.25 10.2101 15.25 12.0001C15.25 13.7901 13.79 15.2501 12 15.2501Z"
+                fill="#596780"
+              />
+            </svg>
+          </div>
+          <div class="sandwich cta-item">
+            <input type="checkbox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 7H21" stroke="#596780" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M3 12H21" stroke="#596780" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M3 17H21" stroke="#596780" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="user">
+            <img src="../assets/images/user-avatar.webp" alt="user-avatar" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar-main-wrapper">
+      <aside>
+        <div class="filter-group">
+          <span class="filter-group-title">type</span>
+          <div class="checkbox-wrapper">
+            <div class="checkbox-container">
+              <input type="checkbox" name="" id="#" />
+              <label for="sport"
+                >Sport
+                <span>(10)</span>
+              </label>
+            </div>
+
+            <div class="checkbox-container">
+              <input type="checkbox" name="" id="#" />
+              <label for="suv"
+                >SUV
+                <span>(12)</span>
+              </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" name="" id="#" />
+              <label for="MPV"
+                >MPV
+                <span>(16)</span>
+              </label>
+            </div>
+
+            <div class="checkbox-container">
+              <input type="checkbox" name="" id="#" />
+              <label for="sedan"
+                >Sedan
+                <span>(20)</span>
+              </label>
+            </div>
+
+            <div class="checkbox-container">
+              <input type="checkbox" name="" id="#" />
+              <label for="coupe"
+                >Coupe
+                <span>(14)</span>
+              </label>
+            </div>
+
+            <div class="checkbox-container">
+              <input type="checkbox" name="" id="#" />
+              <label for="hatchback"
+                >Hatchback
+                <span>(14)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="capacity-wrapper">
+            <span class="filter-group-title">capacity</span>
+            <div class="checkbox-wrapper">
+              <div class="checkbox-container">
+                <input type="checkbox" name="" id="#" />
+                <label for="2people"
+                  >2 People
+                  <span>(10)</span>
+                </label>
+              </div>
+
+              <div class="checkbox-container">
+                <input type="checkbox" name="" id="#" />
+                <label for="4people"
+                  >4 People
+                  <span>(14)</span>
+                </label>
+              </div>
+
+              <div class="checkbox-container">
+                <input type="checkbox" name="" id="#" />
+                <label for="6people"
+                  >6 People
+                  <span>(12)</span>
+                </label>
+              </div>
+
+              <div class="checkbox-container">
+                <input type="checkbox" name="" id="#" />
+                <label for="8people"
+                  >8 or More
+                  <span>(16)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-filter">
+            <span>Price</span>
+            <div class="price-line">
+                <div class="price-secondary-line">
+                </div>
+            </div>
+            <span>Max. 1100.00</span>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <section class="filters-section">
+          <div class="filter-wrapper">
+            <form class="pick-up">
+              <label>
+                <input type="radio" name="pick-up" />
+                Pick - Up
+              </label>
+              <div class="form-group">
+                <div class="select-container">
+                  <label for="location"> Location </label>
+                  <select name="location" id="location">
+                    <option value="" disabled selected hidden>
+                      Select your city
+                    </option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                  </select>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="select-container">
+                  <label for="date"> Date </label>
+                  <input
+                    type="text"
+                    placeholder="Select your date"
+                    onfocus="this.type = 'date'"
+                    onblur="if (!this.value) this.type = 'text';"
+                  />
+                </div>
+                <div class="vertical-line"></div>
+                <div class="select-container">
+                  <label for="time"> Time </label>
+                  <input
+                    type="text"
+                    placeholder="Select your time"
+                    onfocus="this.type = 'time'"
+                    onblur="if (!this.value) this.type = 'text';"
+                  />
+                </div>
+              </div>
+            </form>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M7.16051 3.83577L7.16051 17.4536"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.08273 7.93188L7.1605 3.83522L11.2383 7.93188"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.0887 20.1671L17.0887 6.54934"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21.1665 16.071L17.0887 20.1677L13.0109 16.071"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <form class="drop-off">
+              <label>
+                <input type="radio" name="drop-off" />
+                Drop - Off
+              </label>
+              <div class="form-group">
+                <div class="select-container">
+                  <label for="location"> Location </label>
+                  <select name="location" id="location">
+                    <option value="" disabled selected hidden>
+                      Select your city
+                    </option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                  </select>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="select-container">
+                  <label for="date"> Date </label>
+                  <input
+                    type="text"
+                    placeholder="Select your date"
+                    onfocus="this.type = 'date'"
+                    onblur="if (!this.value) this.type = 'text';"
+                  />
+                </div>
+                <div class="vertical-line"></div>
+                <div class="select-container">
+                  <label for="time"> Time </label>
+                  <input
+                    type="text"
+                    placeholder="Select your time"
+                    onfocus="this.type = 'time'"
+                    onblur="if (!this.value) this.type = 'text';"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="filter-cars">
+          <div class="cards-wrapper">
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Koenigsegg</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/Koenigsegg.png" alt="Koenigsegg" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>90L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $99.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                </div>
+                <a class ="btn" href="car-details.html">Rent Now</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Nissan GT-R</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/nissan.png" alt="Nissan GT-R" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                  <div class="previous-price">
+                    <p>$100.00</p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Rolls Royce</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img
+                    src="../assets/images/rolss-royce.png"
+                    alt="Rolls Royce"
+                  />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Nissan GT-R</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/nissan.png" alt="Nissan GT-R" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                  <div class="previous-price">
+                    <p>$100.00</p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Nissan GT-R</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/nissan.png" alt="Nissan GT-R" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                  <div class="previous-price">
+                    <p>$100.00</p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Nissan GT-R</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/nissan.png" alt="Nissan GT-R" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                  <div class="previous-price">
+                    <p>$100.00</p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Nissan GT-R</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/nissan.png" alt="Nissan GT-R" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                  <div class="previous-price">
+                    <p>$100.00</p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="model-class">
+                  <h4 class="model">Nissan GT-R</h4>
+                  <span class="class">Sport</span>
+                </div>
+                <div class="favorite-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+                      stroke="#90A3BF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="image-wrapper">
+                  <img src="../assets/images/nissan.png" alt="Nissan GT-R" />
+                </div>
+                <div class="specifications">
+                  <div class="fuel">
+                    <svg
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21.09 7.33L19.09 6.33C18.72 6.15 18.26 6.29 18.08 6.66C17.89 7.04 18.04 7.49 18.41 7.67L20 8.46V13.25L16.25 13.26V3C16.25 1 14.91 0 13.25 0H5.25C3.59 0 2.25 1 2.25 3V19.25H0.75C0.34 19.25 0 19.59 0 20C0 20.41 0.34 20.75 0.75 20.75H17.75C18.16 20.75 18.5 20.41 18.5 20C18.5 19.59 18.16 19.25 17.75 19.25H16.25V14.76L20.75 14.75C21.17 14.75 21.5 14.41 21.5 14V8C21.5 7.72 21.34 7.46 21.09 7.33ZM4.75 4.89C4.75 3.5 5.6 3 6.64 3H11.87C12.9 3 13.75 3.5 13.75 4.89V6.12C13.75 7.5 12.9 8 11.86 8H6.64C5.6 8 4.75 7.5 4.75 6.11V4.89ZM5.25 10.25H8.25C8.66 10.25 9 10.59 9 11C9 11.41 8.66 11.75 8.25 11.75H5.25C4.84 11.75 4.5 11.41 4.5 11C4.5 10.59 4.84 10.25 5.25 10.25Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>80L</span>
+                  </div>
+                  <div class="transmission">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.53 2 12 2Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="4"
+                        y="4"
+                        width="16"
+                        height="16"
+                        rx="8"
+                        fill="white"
+                      />
+                      <path
+                        d="M12 6C8.688 6 6 8.688 6 12C6 15.312 8.688 18 12 18C15.312 18 18 15.312 18 12C18 8.688 15.318 6 12 6Z"
+                        fill="#90A3BF"
+                      />
+                      <rect
+                        x="8"
+                        y="8"
+                        width="8"
+                        height="8"
+                        rx="4"
+                        fill="white"
+                      />
+                      <rect x="11" y="17" width="2" height="4" fill="#90A3BF" />
+                      <rect x="17" y="11" width="4" height="2" fill="#90A3BF" />
+                      <rect x="3" y="11" width="4" height="2" fill="#90A3BF" />
+                    </svg>
+                    <span>Manual</span>
+                  </div>
+                  <div class="capacity">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M14.08 14.15C11.29 12.29 6.73996 12.29 3.92996 14.15C2.65996 15 1.95996 16.15 1.95996 17.38C1.95996 18.61 2.65996 19.75 3.91996 20.59C5.31996 21.53 7.15996 22 8.99996 22C10.84 22 12.68 21.53 14.08 20.59C15.34 19.74 16.04 18.6 16.04 17.36C16.03 16.13 15.34 14.99 14.08 14.15Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M19.9901 7.34001C20.1501 9.28001 18.7701 10.98 16.8601 11.21C16.8501 11.21 16.8501 11.21 16.8401 11.21H16.8101C16.7501 11.21 16.6901 11.21 16.6401 11.23C15.6701 11.28 14.7801 10.97 14.1101 10.4C15.1401 9.48001 15.7301 8.10001 15.6101 6.60001C15.5401 5.79001 15.2601 5.05001 14.8401 4.42001C15.2201 4.23001 15.6601 4.11001 16.1101 4.07001C18.0701 3.90001 19.8201 5.36001 19.9901 7.34001Z"
+                        fill="#90A3BF"
+                      />
+                      <path
+                        d="M21.99 16.59C21.91 17.56 21.29 18.4 20.25 18.97C19.25 19.52 17.99 19.78 16.74 19.75C17.46 19.1 17.88 18.29 17.96 17.43C18.06 16.19 17.47 15 16.29 14.05C15.62 13.52 14.84 13.1 13.99 12.79C16.2 12.15 18.98 12.58 20.69 13.96C21.61 14.7 22.08 15.63 21.99 16.59Z"
+                        fill="#90A3BF"
+                      />
+                    </svg>
+                    <span>2 People</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="price-wrapper">
+                  <div class="price">
+                    <p>
+                      $80.00/
+                      <span>day</span>
+                    </p>
+                  </div>
+                  <div class="previous-price">
+                    <p>$100.00</p>
+                  </div>
+                </div>
+                <button class="btn">Rent Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-footer">
+            <button class="btn">show more car</button>
+            <p>120 car</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-inner-wrapper">
+        <div class="logo-vision-wrapper">
+          <div class="logo">
+            <a href="../index.html">morent</a>
+          </div>
+          <p>
+            Our vision is to provide convenience and help increase your sales
+            business.
+          </p>
+        </div>
+
+        <nav>
+          <div class="links">
+            <h5 class="link-title">about</h5>
+            <ul>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="links">
+            <h5 class="link-title">community</h5>
+            <ul>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="links">
+            <h5 class="link-title">socials</h5>
+            <ul>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+              <li>
+                <a href="#">lorem ipsum</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-legal-wrapper">
+        <p>©2022 MORENT. All rights reserved</p>
+        <div class="privacy-terms-wrapper">
+          <a>privacy & policy</a>
+          <a>terms & condition</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

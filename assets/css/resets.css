@@ -20,8 +20,7 @@
 
 body {
   /* 4. Add accessible line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
+   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -59,5 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
